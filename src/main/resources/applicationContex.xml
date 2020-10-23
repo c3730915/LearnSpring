@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation   ="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="userDao" class="com.iitcast.dao.impl.UserDaoImpl" scope="prototype">-->
+<!--        <property name="username" value="zhangsan"></property>-->
+<!--        <property name="age" value="18"></property>-->
+<!--&lt;!&ndash;        普通属性值注入&ndash;&gt;-->
+<!--    </bean>-->
+        <bean id="userDao" class="com.iitcast.dao.impl.UserDaoImpl" scope="prototype">
+            <property name="strList">
+                <list>
+                    <value>aaa</value>
+                    <value>bbb1</value>
+                    <value>aaa</value>
+
+                </list>
+
+            </property>
+            <property name="userMap">
+                <map>
+                    <entry key="user1" value-ref="user1"></entry>
+                    <entry key="user2" value-ref="user2"></entry>
+                </map>
+
+            </property>
+            <property name="username" value="zhangsan"></property>
+            <property name="age" value="18"></property>
+        </bean>
+
+    <bean name="user2" class="com.iitcast.domain.User">
+        <property name="name" value="jay"></property>
+        <property name="add" value="tianjin"></property>
+    </bean>
+
+
+    <bean name="user1" class="com.iitcast.domain.User">
+        <property name="name" value="tom"></property>
+        <property name="add" value="beijing"></property>
+    </bean>
+
+    <bean id="userService" class="com.iitcast.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+<!--    <bean id="userDao" class="com.iitcast.factory.StaticFactory" factory-method="getUserDao" scope="prototype"></bean>-->
+
+</beans>
