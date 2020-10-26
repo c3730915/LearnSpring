@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dataSource_c3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+<!--        class要用复制-复制引用的方法-->
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/jdbc?serverTimezone=GMT"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="123456"></property>
+<!--        属性必须要对应对象里面的set方法，并且大写要变成小写-->
+    </bean>
+
+    <bean id="dataSource_druid" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/jdbc?serverTimezone=GMT"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+
+</beans>
