@@ -1,4 +1,4 @@
-package com.iitcast.test.domain;
+package com.iitcast.test.domain.Spring;
 
 public class NQueens {
     private int n;

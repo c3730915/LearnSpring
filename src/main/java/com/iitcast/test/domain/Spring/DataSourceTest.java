@@ -1,4 +1,4 @@
-package com.iitcast.test;
+package com.iitcast.test.domain.Spring;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;

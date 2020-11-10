@@ -1,4 +1,4 @@
-package com.iitcast.test.domain;
+package com.iitcast.test.domain.Spring;
 
 import com.iitcast.dao.UserDao;
 import com.iitcast.service.UserService;
@@ -9,9 +9,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class test1 {
     @Test
-    public void test1(){
-//        UserService userService = new UserServiceImpl();
-//        userService.save();
+    public void testQueryCount(){
+
+
 
     }
     @Test
