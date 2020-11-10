@@ -1,4 +1,4 @@
-package com.iitcast.test;
+package com.iitcast.test.domain;
 
 import com.iitcast.dao.UserDao;
 import com.iitcast.service.UserService;

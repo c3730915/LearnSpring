@@ -28,21 +28,13 @@
             <property name="username" value="zhangsan"></property>
             <property name="age" value="18"></property>
         </bean>
-
     <bean name="user2" class="com.iitcast.domain.User">
         <property name="name" value="jay"></property>
         <property name="add" value="tianjin"></property>
     </bean>
-
-
     <bean name="user1" class="com.iitcast.domain.User">
         <property name="name" value="tom"></property>
         <property name="add" value="beijing"></property>
-    </bean>
-
-    <bean id="userService" class="com.iitcast.service.impl.UserServiceImpl">
-        <property name="userDao" ref="userDao"></property>
-        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
     </bean>
 
 <!--    <bean id="userDao" class="com.iitcast.factory.StaticFactory" factory-method="getUserDao" scope="prototype"></bean>-->
